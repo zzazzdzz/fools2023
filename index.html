@@ -1,8 +1,321 @@
+
 <!DOCTYPE html>
-<meta charset="utf-8">
+<meta charset='utf-8'>
+<title>TheZZAZZGlitch's Fools2023 - Research Lab Infiltration</title>
+<meta name="viewport" content="width=1200">
 
-<meta http-equiv="refresh" content="0;url=http://fools2023.online/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 
-<h1>Fools2023 is currently live at fools2023.online</h1>
+<script src="bootstrap/jquery-3.1.0.min.js"></script>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+<script src="bootstrap/js/bootstrap.min.js"></script>
 
-<p>Go to <a href="http://fools2023.online/">fools2023.online</a> if you're not redirected automatically.</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+
+<link rel='stylesheet' href='style.css' type='text/css'>
+
+<nav class="navbar navbar-inverse navbar-static-top" id="h_header">
+    <div class="container-fluid">
+        <div class="navbar-header navigator-path">
+            <a class="navbar-brand" href="index.html">Fools2023</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class='active'><a href="index.html">Leaderboard</a></li>
+        </ul>
+    </div>
+</nav>
+<script>
+function formatTimeDiff(diff){
+    var time_split = [];
+    time_split.push(diff % 60);
+    diff = Math.floor(diff / 60);
+    time_split.push(diff % 60);
+    diff = Math.floor(diff / 60);
+    time_split.push(diff % 24);
+    diff = Math.floor(diff / 24);
+    time_split.push(diff);
+    time_split.reverse();
+    var suffixes = ["days", "hours", "minutes", "seconds"];
+    for (var i=0; i<suffixes.length; i++){
+        suffixes[i] = time_split[i] + " " + suffixes[i];
+        // if (time_split[i] == 0) suffixes.splice(i, 1);
+    }
+    return suffixes.join(", ");
+}
+
+function updateTimers(){
+    var now = parseInt(+new Date() / 1000);
+    var untilEventEnd = 1681567200 - now;
+    if (untilEventEnd > 0){
+        $('#countdown').html(formatTimeDiff(untilEventEnd) + " until the end of the event.");
+    }else{
+        $('#countdown').html("The event has ended. Thanks for participating!");
+    }
+}
+
+$(document).ready(function(){
+    updateTimers();
+    setInterval(updateTimers, 1000);
+});
+</script>
+
+<div id="content">
+
+        <center></center>
+        
+    <div id="intro" class="panel panel-default">
+        <h1>Research Lab Infiltration</h1>
+        <h2>TheZZAZZGlitch's April Fools Event 2023</h2>
+        <span class='countdowns'>
+            <span id='countdown'>? until the end of the event.</span>
+        </span><br>
+        <div class="f-ccby"><br><a title="Samaritan - Future Police" href="https://flickr.com/photos/rodrixap/11293209016/">Samaritan - Future Police</a> by <a href="https://flickr.com/people/rodrixap">RodrixAP</a> licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.</div>
+    </div>
+
+    <div class="f-container panel panel-default">
+        <div class="f-single-line" style="padding: 10px 25px 10px 25px; line-height: 25px; font-weight:bold" id="flavor1">
+            Unfortunately, <a href="apology.html">I wasn't able to create a complete Fools Event on 2023</a>. But still, people had a CTF to play around with.
+        </div>
+    </div>
+
+    <div class="f-container panel panel-default">
+        <div class="f-category">
+            The leaderboard
+        </div>
+        <table class="table table-striped table-bordered table-condensed table-hover f-inside-table leaderboard" id="leaderboard">
+
+            <tr class=''>
+                <td style='width:100px'><b>#1</b></td>
+                <td><b>Buurazu</b></td>
+                <td style='width:250px'><b>1337</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#2</b></td>
+                <td><b>jfb1337</b></td>
+                <td style='width:250px'><b>1337</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#3</b></td>
+                <td><b>OdnetninI</b></td>
+                <td style='width:250px'><b>1337</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#4</b></td>
+                <td><b>Radixán</b></td>
+                <td style='width:250px'><b>1337</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#5</b></td>
+                <td><b>pfero</b></td>
+                <td style='width:250px'><b>1337</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#6</b></td>
+                <td><b>Muzuwi</b></td>
+                <td style='width:250px'><b>1337</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#7</b></td>
+                <td><b>byte-chan</b></td>
+                <td style='width:250px'><b>1337</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#8</b></td>
+                <td><b>vriska</b></td>
+                <td style='width:250px'><b>1087</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#9</b></td>
+                <td><b>Rairii</b></td>
+                <td style='width:250px'><b>987</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#10</b></td>
+                <td><b>tgsm</b></td>
+                <td style='width:250px'><b>987</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#11</b></td>
+                <td><b>talcat</b></td>
+                <td style='width:250px'><b>900</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#12</b></td>
+                <td><b>raining_blood</b></td>
+                <td style='width:250px'><b>800</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#13</b></td>
+                <td><b>5f633c68016ed643</b></td>
+                <td style='width:250px'><b>787</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#14</b></td>
+                <td><b>Lumosity</b></td>
+                <td style='width:250px'><b>350</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#15</b></td>
+                <td><b>TybaltYoshi</b></td>
+                <td style='width:250px'><b>350</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#16</b></td>
+                <td><b>Bluceli</b></td>
+                <td style='width:250px'><b>350</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#17</b></td>
+                <td><b>euni</b></td>
+                <td style='width:250px'><b>200</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#18</b></td>
+                <td><b>Karathan</b></td>
+                <td style='width:250px'><b>200</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#19</b></td>
+                <td><b>MCboyIR</b></td>
+                <td style='width:250px'><b>200</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#20</b></td>
+                <td><b>usless534</b></td>
+                <td style='width:250px'><b>200</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#21</b></td>
+                <td><b>yuipas</b></td>
+                <td style='width:250px'><b>200</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#22</b></td>
+                <td><b>__mk_km__</b></td>
+                <td style='width:250px'><b>150</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#23</b></td>
+                <td><b>Stewmat</b></td>
+                <td style='width:250px'><b>150</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#24</b></td>
+                <td><b>MaeCilantro</b></td>
+                <td style='width:250px'><b>100</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#25</b></td>
+                <td><b>lyra <3</b></td>
+                <td style='width:250px'><b>100</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#26</b></td>
+                <td><b>Tanuki</b></td>
+                <td style='width:250px'><b>100</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#27</b></td>
+                <td><b>xfix</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#28</b></td>
+                <td><b>Alrysu</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#29</b></td>
+                <td><b>cognaso</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#30</b></td>
+                <td><b>LukeFZ</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#31</b></td>
+                <td><b>ϕ Celkie</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#32</b></td>
+                <td><b>foo</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#33</b></td>
+                <td><b>0xFFBB</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#34</b></td>
+                <td><b>hbe</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#35</b></td>
+                <td><b>optimotion</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#36</b></td>
+                <td><b>Quantatic</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#37</b></td>
+                <td><b>wheresthepkmnsav</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+        
+            <tr class=''>
+                <td style='width:100px'><b>#38</b></td>
+                <td><b>martinho</b></td>
+                <td style='width:250px'><b>50</b><span style='color:#777'>/1337</span></td>
+            </tr>
+                </table>
+    </div>
+</div>
+<br>&nbsp;nbsp;
