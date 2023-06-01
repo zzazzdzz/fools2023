@@ -1,0 +1,4 @@
+======================================================================
+Welcome to Glitch Research Laboratory Network: Test Server 2 (GRLTS02)
+======================================================================
+This machine requires authentication.

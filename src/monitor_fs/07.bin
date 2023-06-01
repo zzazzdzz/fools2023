@@ -1,0 +1,21 @@
+to do list
+- revisit the sentience issues in the battle program (missingno addressing players?)
+- upgrade slower processor on grlts02
+- add glvm disassembler to language monitor <----- URGENT, REQUIRED FOR GLVM TRANSITION
+  decide on disassembly syntax too
+
+FOOLS2023_{OhLookThereIsATextFile}
+
+PrintStr     = 0x0008
+StrCmp       = 0x0010
+FindIndex    = 0x0018
+ConvertHex   = 0x0020
+MemCpy       = 0x0028
+ReadStr      = 0x0030
+StrTrim      = 0x0038
+MemSet       = 0x0040
+
+2319
+2324
+2331
+far red close blue

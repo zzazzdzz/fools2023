@@ -1,0 +1,18 @@
+======================================================================
+Welcome to Glitch Research Laboratory Network: Test Server 1 (GRLTS01)
+======================================================================
+GRLTS01 is intended for research purposes only, to aid our engineers
+in migrating their software to the latest GLVM architecture.
+This server will boot into a machine language monitor, providing
+a simple environment for development and testing.
+
+Note that this server is publicly accessible, and thus, should never
+be used to store any confidential information. If storage of data is
+necessary, consider utilizing encryption, or using our dedicated
+storage servers GRLFS01.
+Additionally, consider using GRLTS02 for any serious work - it's
+an authenticated test server, which should be far more secure.
+======================================================================
+Running machine language monitor now.
+======================================================================
+
